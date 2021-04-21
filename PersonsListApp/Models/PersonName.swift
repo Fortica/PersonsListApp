@@ -14,19 +14,23 @@ struct Person {
     let phoneNumber: String
     let email: String
     
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
     static func getData() -> [Person] {
         var person = [Person]()
-        for _ in 1...10 {
+        for _ in 1...DataManager.init().names.count {
         let employee =
         [
             Person(
-                name: DataManager.init().names,
-                surname: DataManager.init().surnames,
-                phoneNumber: DataManager.init().phoneNumbers,
-                email: DataManager.init().emails
+                name: DataManager.init().names.randomElement() ?? "",
+                surname: DataManager.init().surnames.randomElement() ?? "",
+                phoneNumber: DataManager.init().phoneNumbers.randomElement() ?? "",
+                email: DataManager.init().emails.randomElement() ?? ""
             )
         ]
-                person.append(contentsOf: employee)
+            person.append(contentsOf: employee)
     }
         return person
 }
@@ -34,8 +38,9 @@ struct Person {
 
 class DataManager {
     
-    var names = ["Alison", "Bob", "Caren", "Daniel", "Fiona", "George", "Harry", "Kim", "Lionel", "Piter"].randomElement() ?? ""
-    var surnames = ["Brown", "Black", "Green", "Grey", "Smith", "Parker", "Potter", "Dousen", "Pitt", "Depp"].randomElement() ?? ""
-    var phoneNumbers = ["01234", "12345", "23456", "34567", "45678", "56789", "67890", "78901", "89012", "90123"].randomElement() ?? ""
-    var emails = ["@person0", "@person1", "@person2", "@person3", "@person4", "@person5", "@person6", "@person7", "@person8", "@person9"].randomElement() ?? ""
+    var names = ["Alison", "Bob", "Caren", "Daniel", "Fiona", "George", "Harry", "Kim", "Lionel", "Piter"]
+    var surnames = ["Brown", "Black", "Green", "Grey", "Smith", "Parker", "Potter", "Dousen", "Pitt", "Depp"]
+    var phoneNumbers = ["01234", "12345", "23456", "34567", "45678", "56789", "67890", "78901", "89012", "90123"]
+    var emails = ["@person0", "@person1", "@person2", "@person3", "@person4", "@person5", "@person6", "@person7", "@person8", "@person9"]
+    
 }

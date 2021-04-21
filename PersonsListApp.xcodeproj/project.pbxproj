@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A74D6FA2630501B00515A33 /* PhoneNumberEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A74D6F92630501B00515A33 /* PhoneNumberEmailViewController.swift */; };
+		6A74D6FD26307A3000515A33 /* GeneraleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A74D6FC26307A3000515A33 /* GeneraleInfoViewController.swift */; };
 		6A8463BC262E26D2005C87BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8463BB262E26D2005C87BA /* AppDelegate.swift */; };
 		6A8463BE262E26D2005C87BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8463BD262E26D2005C87BA /* SceneDelegate.swift */; };
 		6A8463C3262E26D2005C87BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8463C1262E26D2005C87BA /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A74D6F92630501B00515A33 /* PhoneNumberEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberEmailViewController.swift; sourceTree = "<group>"; };
+		6A74D6FC26307A3000515A33 /* GeneraleInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneraleInfoViewController.swift; sourceTree = "<group>"; };
 		6A8463B8262E26D2005C87BA /* PersonsListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8463BB262E26D2005C87BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A8463BD262E26D2005C87BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				6A8463D6262E298C005C87BA /* PersonsTableViewController.swift */,
+				6A74D6F92630501B00515A33 /* PhoneNumberEmailViewController.swift */,
+				6A74D6FC26307A3000515A33 /* GeneraleInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 				6A8463BC262E26D2005C87BA /* AppDelegate.swift in Sources */,
 				6A8463BE262E26D2005C87BA /* SceneDelegate.swift in Sources */,
 				6A8463D7262E298C005C87BA /* PersonsTableViewController.swift in Sources */,
+				6A74D6FA2630501B00515A33 /* PhoneNumberEmailViewController.swift in Sources */,
+				6A74D6FD26307A3000515A33 /* GeneraleInfoViewController.swift in Sources */,
 				6A8463DA262E2BE1005C87BA /* PersonName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="QXF-YA-WKa" kind="show" id="5gK-sl-bfX"/>
+                                    <segue destination="QXF-YA-WKa" kind="show" identifier="phoneNumberWithEmail" id="Isk-wz-Ozc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -40,12 +40,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLs-B7-ib6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="-84"/>
+            <point key="canvasLocation" x="799" y="-76"/>
         </scene>
         <!--Name-->
         <scene sceneID="IIX-Je-G0o">
             <objects>
-                <viewController id="QXF-YA-WKa" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="QXF-YA-WKa" customClass="PhoneNumberEmailViewController" customModule="PersonsListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JT5-hy-2Td">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +76,61 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name" largeTitleDisplayMode="never" id="ykl-aq-Lto"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="ZxD-l3-JPF" id="1ia-fJ-JVa"/>
+                        <outlet property="phoneNumberLabel" destination="Fpg-YQ-Kef" id="PoT-Zu-mRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQl-5d-UeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="-85"/>
+            <point key="canvasLocation" x="1601" y="-76"/>
+        </scene>
+        <!--Persons List-->
+        <scene sceneID="gUh-0l-PU3">
+            <objects>
+                <tableViewController id="RVl-q6-wue" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mUC-ol-VLL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showGeneraleInfo" id="HXE-Yz-rIY">
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HXE-Yz-rIY" id="hMf-2i-8Vl">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RVl-q6-wue" id="q3e-TH-tD7"/>
+                            <outlet property="delegate" destination="RVl-q6-wue" id="qT5-CE-UwX"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="8CY-rD-nWy"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="PhI-z1-BtU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6X-U1-4ZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="677"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hDQ-zv-opK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGb-aC-Age" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="pmI-Kx-XZc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ejI-sC-pLV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qIH-3P-25G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RVl-q6-wue" kind="relationship" relationship="rootViewController" id="yPM-9x-mJb"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-34" y="678"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1gF-pb-hLs">
@@ -93,6 +144,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Jzo-2m-oAs" kind="relationship" relationship="viewControllers" id="KTP-dg-Fmx"/>
+                        <segue destination="pmI-Kx-XZc" kind="relationship" relationship="viewControllers" id="DhG-ii-nQ6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDu-rc-NQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
