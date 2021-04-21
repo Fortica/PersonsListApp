@@ -58,12 +58,12 @@
 		6A8463BA262E26D2005C87BA /* PersonsListApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A8463D1262E2723005C87BA /* ViewControllers */,
 				6A8463D3262E2739005C87BA /* Models */,
+				6A8463D1262E2723005C87BA /* ViewControllers */,
 				6A8463D0262E26F5005C87BA /* Storyboards */,
 				6A8463BB262E26D2005C87BA /* AppDelegate.swift */,
-				6A8463BD262E26D2005C87BA /* SceneDelegate.swift */,
 				6A8463C4262E26D3005C87BA /* Assets.xcassets */,
+				6A8463BD262E26D2005C87BA /* SceneDelegate.swift */,
 				6A8463C9262E26D3005C87BA /* Info.plist */,
 			);
 			path = PersonsListApp;

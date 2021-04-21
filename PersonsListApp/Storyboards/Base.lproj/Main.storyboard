@@ -34,7 +34,9 @@
                             <outlet property="delegate" destination="eeV-yZ-jfN" id="jwx-wo-3HA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="G2d-lE-0XX"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="G2d-lE-0XX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="81L-bp-f9t"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLs-B7-ib6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQl-5d-UeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507.5" y="-84.507042253521121"/>
+            <point key="canvasLocation" x="1699" y="-85"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1gF-pb-hLs">
@@ -85,6 +87,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l9y-Pj-hWI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MB3-wV-1eQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
