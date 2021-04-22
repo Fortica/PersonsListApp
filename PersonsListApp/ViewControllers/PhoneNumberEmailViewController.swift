@@ -12,26 +12,16 @@ class PhoneNumberEmailViewController: UIViewController {
     @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
-    var phoneNumber: String!
-    var email: String!
+    var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        phoneNumberLabel.text = "Phone: \(phoneNumber!)"
-        emailLabel.text = "Email: \(email!)"
+        phoneNumberLabel.text = "Phone: \(person.phoneNumber)"
+        emailLabel.text = "Email: \(person.email)"
+        
+        title = person.fullName
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

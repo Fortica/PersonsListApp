@@ -9,11 +9,8 @@ import UIKit
 
 class PersonsTableViewController: UITableViewController {
     
-    let persons = Person.getData()
+    var persons: [Person] = []
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     // MARK: - Table view data source
 
@@ -22,7 +19,7 @@ class PersonsTableViewController: UITableViewController {
         
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "namePerson", for: indexPath)
         
@@ -35,19 +32,12 @@ class PersonsTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Table view data delegate
-
     
-    
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let phoneNumberVC = segue.destination as? PhoneNumberEmailViewController else { return }
-        
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let person = persons[indexPath.row]
-        phoneNumberVC.phoneNumber = person.phoneNumber
-        phoneNumberVC.email = person.email
-
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let phoneNumberVC = segue.destination as! PhoneNumberEmailViewController
+            phoneNumberVC.person = persons[indexPath.row]
+        }
     }
 
 }
